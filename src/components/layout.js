@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import { Seo } from './seo.js';
+import '../styles/global.css';
 
 export default function Layout({
   children,
   title = false,
   description = false,
   image = false,
-  path = false
+  path = false,
 }) {
   const data = useStaticQuery(graphql`
     query GetSiteTitle {
@@ -32,5 +33,5 @@ export default function Layout({
       </header>
       <main>{children}</main>
     </>
-  )
+  );
 }
