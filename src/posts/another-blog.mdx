@@ -4,6 +4,24 @@ title: Another blog
 description: watch out, I'm on a roll!
 ---
 
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+export const query = graphql`
+  query SmashburberQuery {
+    file(name: {eq: "smashburger"}) {
+      childImageSharp {
+        gatsbyImageData(placeholder: DOMINANT_COLOR)
+      }
+    }
+  }
+`;
+
 # Oh Dang
+
+<GatsbyImage
+  image={getImage(props.data.file)}
+  alt="Yummy smash burger"
+/>
 
 This blog is even better than the last one.
