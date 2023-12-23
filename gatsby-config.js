@@ -51,5 +51,15 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    // gatsby plugin for sanity headless CMS
+    // if want to get data only can use option
+    // projectId and dataset to get data from santiy project
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'vnkupgyb',
+        dataset: 'production',
+      }
+    },
   ],
 };
